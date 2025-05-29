@@ -1,0 +1,20 @@
+{
+  "name": "proyecto-saas",
+  "version": "1.0.0",
+  "description": "Este repositorio contiene la arquitectura base de un sistema SaaS.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "testW": "node node_modules\\jasmine-node\\bin\\jasmine-node servidor",
+    "test": "node node_modules/jasmine-node/bin/jasmine-node servidor"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "jasmine-node": "^3.0.0"
+  }
+}

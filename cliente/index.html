@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Simón Dice</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="container mt-4">
+  <h1>Simón Dice</h1>
+
+  <div class="form-group">
+    <input type="text" id="nombreJugador" class="form-control" placeholder="Tu nick">
+    <button id="btnAgregar" class="btn btn-primary mt-2">Agregar usuario</button>
+    <p>Usuarios conectados: <span id="numJugadores">0</span></p>
+  </div>
+
+  <hr>
+
+  <div class="mb-3 d-flex flex-wrap gap-2">
+    <button id="btnVerUsuarios" class="btn btn-info">Ver usuarios</button>
+    <button onclick="controlWeb.mostrarNumeroUsuarios()" class="btn btn-primary">Número total</button>
+    <button onclick="controlWeb.mostrarUsuarioActivo()" class="btn btn-outline-secondary">¿Está activo?</button>
+    <button id="btnEliminarUsuario" class="btn btn-danger">Eliminar usuario</button>
+    <button id="btnVerSecuencia" class="btn btn-secondary">Ver secuencia</button>
+    <button id="btnSiguiente" class="btn btn-warning">Generar siguiente</button>
+    <button id="btnComprobar" class="btn btn-success">Comprobar intento</button>
+    <button id="btnReiniciar" class="btn btn-dark">Reiniciar juego</button>
+  </div>
+
+  <div class="form-group">
+    <textarea id="intento" rows="2" class="form-control" placeholder="Ej: rojo, azul, verde"></textarea>
+  </div>
+
+  <div id="output"></div>
+
+  <script src="./clienteRest.js"></script>
+  <script src="./controlWeb.js"></script>
+</body>
+</html>
