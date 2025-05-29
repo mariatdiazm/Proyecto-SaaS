@@ -24,8 +24,13 @@ function Sistema() {
     };
 
     this.eliminarUsuario = function(nick) {
+    if (this.usuarios[nick]) {
         delete this.usuarios[nick];
-    };
+        return true;
+    }
+    return false;
+};
+
 
     this.numeroUsuarios = function() {
         return Object.keys(this.usuarios).length;
@@ -60,4 +65,4 @@ function JuegoSimon() {
     };
 }
 
-module.exports.Sistema=Sistema 
+module.exports = { Sistema, JuegoSimon };
